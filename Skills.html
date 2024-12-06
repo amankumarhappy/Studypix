@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Studypix</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Hover Effects */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Floating Contact Button */
+        .floating-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: block;
+            }
+            .nav-links a {
+                display: block;
+                padding: 0.5rem 0;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            h2 {
+                font-size: 2rem !important;
+            }
+            .text-xl {
+                font-size: 1.1rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Studypix Logo" class="h-10 mr-3">
+                    <h1 class="text-2xl font-bold text-blue-600"></h1>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="Tools.html" class="text-gray-800 hover:text-blue-600">Tools</a>
+                    <a href="Skills.html" class="text-gray-800 hover:text-blue-600">Skills</a>
+                    <a href="Study Materials.html" class="text-gray-800 hover:text-blue-600">Study Materials</a>
+                    <a href="About Us.html" class="text-gray-800 hover:text-blue-600">About Us</a>
+                </div>
+            </div>
+            <!-- Mobile Navigation Links -->
+            <div class="nav-links md:hidden">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="Tools.html" class="block py-2 text-gray-800 hover:text-blue-600">Tools</a>
+                <a href="Skills.html" class="block py-2 text-gray-800 hover:text-blue-600">Skills</a>
+                <a href="Study Materials.html" class="block py-2 text-gray-800 hover:text-blue-600">Study Materials</a>
+                <a href="About Us.html" class="block py-2 text-gray-800 hover:text-blue-600">About Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Floating Contact Button -->
+    <a href="mailto:bcomstudentakanksha@gmail.com" class="floating-contact bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+        <i class="fas fa-envelope text-2xl"></i>
+    </a>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-8 text-blue-600">Skills for B.Com Students</h1>
+            
+            <!-- Professional Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Professional Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Accounting Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                         <a href="https://youtu.be/yYX4bvQSqbo?si=clz3v6pfgnFcYiCP">   <li>Manual Accounting Basics</li></a>
+                           <a href="https://youtube.com/playlist?list=PLHq_wPEVVWy1srLz3rZACr5PZIhXWSnVq&si=2JGZmd5FNJCvdbLh"> <li>Tally ERP Basics</li></a>
+                            <a href="https://youtu.be/kvlTvdO51Mg?si=P__7bfFbvtK0bDt5"></a>
+                        </ul>
+                        
+                        
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Financial Analysis</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                           <a href="https://youtu.be/pflmPkogzCw?si=mb0YZ0HcrsyqwXGo"> <li>Balance Sheet Analysis</li></a>
+                            
+                         <a href="https://youtube.com/playlist?list=PL8uhW8cclMiNv8UT1NUawB-XpXVeJ8mN8&si=Lwru5ixPSS9zNBYQ">   <li>Investment Basics</li></a>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://www.coursera.org/courses?query=financial%20analysis" class="text-blue-600 hover:underline" target="_blank">Online Course</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Technical Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Excel Proficiency</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Basic Excel</li>
+                            <li>Intermediate Excel</li>
+                            <li>Advanced Excel</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtube.com/playlist?list=PLXwTOG3-tRwgy4lJ9j_CPwpJmr2uCaGH1&si=WIP2yXcBSVCDvwrJ" class="text-blue-600 hover:underline" target="_blank">Excel Tutorial Series</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Presentation Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                       
+                            <li>Canva for Business</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/hrgrFmV7aCM?si=7YTp3bP6KsPLyOqJ" class="text-blue-600 hover:underline" target="_blank">Canva </a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Analytical Tools</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                           <a href="https://youtube.com/playlist?list=PLiOBAYiI6xJjG2iTqgze_75YbdCTvZc4x&si=h3bjW6pGkX8Zdxk_"><li>SPSS/Statistics Software Basics</li></a> 
+                      <a href="https://youtu.be/N2opj8XzYBY?si=r68uM1wYNN41Xplo">      <li>Google Sheets</li></a>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Communication Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Communication Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Business Communication</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Email Etiquette</li>
+                            <li>Business Letter Formats</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/HAnw168huqA?si=yaw6xwydHb8JLIg1" class="text-blue-600 hover:underline" target="_blank">Online Tutorial</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Presentation Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Public Speaking Tips</li>
+                            <li>Pitching Ideas</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtube.com/playlist?list=PLSnPZxJoBf9OZl_nuB6pcxSX5e2qOd-20&si=hlgL05CJgGmtv26X" class="text-blue-600 hover:underline" target="_blank">Public Speaking Tutorial</a>
+                        </div>
+                    </div>
+                  
+                </div>
+            </section>
+
+            <!-- Soft Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Soft Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Time Management</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Tools for Time Management</li>
+                            <li>Creating Effective Study Plans</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/7ax4Tb5G1P4?si=gfEJFnsj7MAdylGn" class="text-blue-600 hover:underline" target="_blank">Time Management Tips</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Critical Thinking</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Problem-Solving Techniques</li>
+                            <li>Logical Reasoning Tutorials</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtube.com/playlist?list=PLtKNX4SfKpzX_bhh4LOEWEGy3pkLmFDmk&si=ULEs9N4qPZDj-jvo" class="text-blue-600 hover:underline" target="_blank">Online Tutorial</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Leadership and Teamwork</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Building Teamwork Skills</li>
+                            <li>Leadership Strategies</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtube.com/playlist?list=PLLy_2iUCG87A90Fhyadnxr1Yy6fcd0SKs&si=ae_TBLNxRMPhG6is" class="text-blue-600 hover:underline" target="_blank">Leadership Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Industry-Oriented Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Industry-Oriented Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Taxation Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                         <a href="https://youtu.be/Z_YCaYw3sJ8?si=GeJ9CnVw0H64lGc6"> <li>GST Filing Tutorial</li></a>
+                           <a href="https://youtu.be/qCfGsQYINKc?si=j9P9betnBW1bn7jv"> <li>Income Tax Basics</li></a>
+                        </ul>
+                       
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Marketing Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <a href="https://youtu.be/XuUbLHIRyuM?si=kcIipAfklPkuAG0b"></a>
+                           <a href="https://youtu.be/WC9LTbAEJUc?si=bf8zbQlZwbeRNX1A"><li>Content Marketing</li></a>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/dS0PtshQDls?si=sS-KXjOAO3e981Er" class="text-blue-600 hover:underline" target="_blank">Online Course</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Entrepreneurship</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                          <a href="https://youtu.be/uOA5h_KdjO4?si=veQ1E_xCXhFn2xAV">  <li>Creating Business Plans</li></a>
+<a href="https://youtu.be/so-VUmd_6RY?si=ItQBgR98-0FNNTZ8">    <li>Basics of E-Commerce</li></a>                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/eHJnEHyyN1Y?si=SSsSf6wvVPjMLpYW" class="text-blue-600 hover:underline" target="_blank">Business Plan Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Development Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Personal Development Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Self-Motivation</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                          
+                           <a href="https://youtu.be/FWTNMzK9vG4?si=7wUOX7XjWD3nnknG"><li>Overcoming Procrastination</li></a> 
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/pashzLmba0I?si=NTaWT5cb-1VCmD14" class="text-blue-600 hover:underline" target="_blank">Become Disciplined</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Emotional Intelligence</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Handling Stress and Anxiety</li>
+                            <li>Building Confidence</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/i-pazYyLSWQ?si=tnYn5p9mM6VpIjqL" class="text-blue-600 hover:underline" target="_blank">Stress Management Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career-Oriented Skills -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Career-Oriented Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Interview Preparation</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                          <a href="https://youtu.be/U70MUq9C88w?si=Nz0t5iaU2H02aDQF"><li>Common Interview Questions</li></a>  
+                           
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/otkpUBKqCCQ?si=upTVjARzYENrWXIM" class="text-blue-600 hover:underline" target="_blank">Interview Prep Course</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Networking Skills</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                         
+                            <a href="https://youtu.be/QQzD95tKsu8?si=a3SxtBMY7b4B9kBE"><li>Networking Tips</li></a>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://youtu.be/xS2gks_c6G8?si=IL7Sa-LrxWDKrqvJ" class="text-blue-600 hover:underline" target="_blank">LinkedIn Optimization Tutorial</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Certifications</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                          <a href="https://proschoolonline.com/blog/7-in-demand-courses-to-do-along-with-your-bcom"> <li>Recommended Certifications</li></a> 
+                        </ul>
+                       
+                    </div>
+                </div>
+            </section>
+
+        
+            <!-- Certifications and Online Courses -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6 text-blue-600">Certifications and Online Courses</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Free Course Recommendations</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Coursera: Accounting Fundamentals</li>
+                            <li>edX: Business Management Basics</li>
+                            <li>Skillshare: Digital Marketing</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://www.coursera.org/" class="text-blue-600 hover:underline" target="_blank">Explore Coursera</a>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">LinkedIn Learning</h3>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Excel for Accountants</li>
+                            <li>Time Management courses</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="https://www.linkedin.com/learning/" class="text-blue-600 hover:underline" target="_blank">Explore LinkedIn Learning</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center sm:text-left">
+                    <h4 class="text-lg md:text-xl font-bold mb-4">Studypix</h4>
+                    <p class="text-sm md:text-base">Your comprehensive platform for B.Com student success.</p>
+                </div>
+                <div class="text-center sm:text-left">
+                    <h4 class="text-lg md:text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-sm md:text-base hover:text-blue-400">Home</a></li>
+                        <li><a href="Tools.html" class="text-sm md:text-base hover:text-blue-400">Tools</a></li>
+                        <li><a href="Study Materials.html" class="text-sm md:text-base hover:text-blue-400">Resources</a></li>
+                        <li><a href="About Us.html" class="text-sm md:text-base hover:text-blue-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="text-center sm:text-left">
+                    <h4 class="text-lg md:text-xl font-bold mb-4">Connect</h4>
+                    <div class="flex justify-center sm:justify-start space-x-4">
+                        <a href="#" class="text-xl md:text-2xl hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-xl md:text-2xl hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-xl md:text-2xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl md:text-2xl hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="text-center sm:text-left">
+                    <h4 class="text-lg md:text-xl font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-sm md:text-base hover:text-blue-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-sm md:text-base hover:text-blue-400">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="text-sm md:text-base hover:text-blue-400">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-4 border-t border-gray-800">
+                <p class="text-sm md:text-base">&copy; 2024 Studypix. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
